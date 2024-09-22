@@ -1,0 +1,140 @@
+<?php
+
+session_start():
+$con=mysqli_connect('localhost','root');
+if($con){
+  echo "connection successfully";
+}
+else{
+  echo "no connection";
+}
+
+mysqli_select_db($con,'sessionpractical');
+
+?>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration</title>
+  <style>
+   body {
+    background-image: url(
+  "https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000");
+   }
+   p {color:red;}
+   
+  </style>
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body>
+ 
+  
+<form action="connect.php" method="post">
+
+  <div class="container">
+   
+    <h1 style="color:darkgreen;">Registration Form</h1>
+   
+    <label for="Name"><b>Name: <sup style="color:red;">*</sup></b></label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Enter Name" name="Name"  id="Name" required>
+    <br>
+    <br>
+
+    <label for="email"><b>Email: <sup style="color: red;">*</sup></b></label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <br>
+    <br>
+
+    <label for="mobileNo"><b>Mobile No: </b></label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Enter Mobile No." name="mobileNo" id="mobileNo">
+    <br>
+    <br>
+
+
+    <span><b>Date of Birth:</b></span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="date" name="dob"><br><br>
+
+    <span><b>Educational Level</b></Span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <select name="Educational" id="">
+                <option>Secondary Education</option>
+                <option>UG</option>
+                <option>PG</option>
+                <option>PHD</option>
+            </select><br><br>
+    <span><b>Gender</b></span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <input type="radio"name="Gender"><label>Male</label>&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="Gender"><label>Female</label>&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="Gender"><label>Others</label><br><br>
+
+
+
+
+
+
+
+
+    <label for="psw"><b>Password: <sup><img border="0" alt="*" src="https://t4.ftcdn.net/jpg/01/95/37/97/360_F_195379771_GOzX2HsJ1AGQvyMYjCBE6emaS4bf0v17.jpg" width="8" height="8"></sup></b></label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <br>
+    <br>
+
+
+
+
+    <label for="psw-repeat"><b>Re-Enter Password: <sup><img border="0" alt="*" src="https://t4.ftcdn.net/jpg/01/95/37/97/360_F_195379771_GOzX2HsJ1AGQvyMYjCBE6emaS4bf0v17.jpg" width="8" height="8"></sup></b></label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="password" placeholder="Re-Enter Password" name="psw-repeat" id="psw-repeat" required>
+    <br>
+    <br>
+   
+    <input type="checkbox" name=ag value="yes">I Agree to Terms      
+    <p>Click the check Box you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <input type="submit" value="Register">
+ 
+  </div>
+  
+ 
+
+
+
+
+  <div class="container signin">
+    <p>Already have an account? <a href="wep.html">Log in</a></p>
+  </div>
+
+ <a href="https://accounts.google.com">
+<img border="3" alt="Google" src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" width="25" height="25">
+</a>
+
+
+
+
+<a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D">
+<img border="3" alt="Twitter" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREv2iK0rk8t7xPQQx_G-SKoUNao4VpV5ywoF6VdVJZZQ&s" width="25" height="25">
+</a>
+
+</form>
+
+</body>
+</html>
